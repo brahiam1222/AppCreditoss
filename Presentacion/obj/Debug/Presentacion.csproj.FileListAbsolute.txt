@@ -1,0 +1,17 @@
+C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\bin\Debug\Presentacion.exe.config
+C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\bin\Debug\Presentacion.exe
+C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\bin\Debug\Negocio.dll
+C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\bin\Debug\Negocio.pdb
+C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\obj\Debug\Presentacion.csprojAssemblyReference.cache
+C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\obj\Debug\Presentacion.FrmLogin.resources
+C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\obj\Debug\Presentacion.FrmClientes.resources
+C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\bin\Debug\Datos.dll
+C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\bin\Debug\Datos.pdb
+C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\obj\Debug\Presentacion.FrmPrincipal.resources

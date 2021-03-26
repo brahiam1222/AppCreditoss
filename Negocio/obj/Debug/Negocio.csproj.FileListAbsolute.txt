@@ -1,0 +1,9 @@
+C:\Users\EQUIPO\source\repos\AppCreditos\Negocio\bin\Debug\Negocio.dll
+C:\Users\EQUIPO\source\repos\AppCreditos\Negocio\bin\Debug\Negocio.pdb
+C:\Users\EQUIPO\source\repos\AppCreditos\Negocio\bin\Debug\Datos.dll
+C:\Users\EQUIPO\source\repos\AppCreditos\Negocio\bin\Debug\Datos.pdb
+C:\Users\EQUIPO\source\repos\AppCreditos\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\EQUIPO\source\repos\AppCreditos\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\EQUIPO\source\repos\AppCreditos\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\EQUIPO\source\repos\AppCreditos\Negocio\obj\Debug\Negocio.dll
+C:\Users\EQUIPO\source\repos\AppCreditos\Negocio\obj\Debug\Negocio.pdb
