@@ -5,6 +5,7 @@ namespace Negocio
 {
     public class ClsCliente_Negocio
     {
+        public String[] aux = new  String[9];
         public String msn;
         public String id_, nombre_, 
                 contacto_,  correo_, 
@@ -28,25 +29,75 @@ namespace Negocio
                     contactoE, 
                     Sexo, 
                     estado);
+                if(ObjClientes.sw ==0)
+                { 
                 msn = "El cliente: " + nombre + " ha sido registrado con exito";
+                }
+                else
+                {
+                    msn = "La identificacion" + id + "no se puede registrar";
+                }
             }
         }
         public void Fnt_ConsultarCliente(String id)
             {
-                if(id !="")
-                {
+                if(id !="")    
+            {
                 ClsClientes_Datos ObjConsultar = new ClsClientes_Datos();
                 ObjConsultar.Fnt_ConsultarDatos(id);
-                nombre_ = Convert.ToString(ObjConsultar.Lectura[0]);
-                contacto_ = Convert.ToString(ObjConsultar.Lectura[1]);
-                correo_ = Convert.ToString(ObjConsultar.Lectura[2]);
-                edad_ = Convert.ToString(ObjConsultar.Lectura[3]);
-                ingresos_ = Convert.ToString(ObjConsultar.Lectura[4]);
-                Empresa_ = Convert.ToString(ObjConsultar.Lectura[5]);
-                contactoE_ = Convert.ToString(ObjConsultar.Lectura[6]);
-                Sexo_ = Convert.ToString(ObjConsultar.Lectura[7]);
-                estado_ = Convert.ToString(ObjConsultar.Lectura[8]);
+
+                if (ObjConsultar.sw == 1)
+                {
+                    for (int i = 0; i <= 8; i++)
+                    {
+                        aux[i] = Convert.ToString(ObjConsultar.Lectura[i]);
+                    }
+                    ObjConsultar.objconect_select.connection.Close();
+                    msn = "";
                 }
+                else
+                    {
+                        msn = "No se econtraron registros" + id;                   
+                    }
+
+                //nombre_ = Convert.ToString(ObjConsultar.Lectura[0]);
+                //contacto_ = Convert.ToString(ObjConsultar.Lectura[1]);
+                //correo_ = Convert.ToString(ObjConsultar.Lectura[2]);
+                //edad_ = Convert.ToString(ObjConsultar.Lectura[3]);
+                //ingresos_ = Convert.ToString(ObjConsultar.Lectura[4]);
+                //Empresa_ = Convert.ToString(ObjConsultar.Lectura[5]);
+                //contactoE_ = Convert.ToString(ObjConsultar.Lectura[6]);
+                //Sexo_ = Convert.ToString(ObjConsultar.Lectura[7]);
+                //estado_ = Convert.ToString(ObjConsultar.Lectura[8]);
             }
+        }
+        public void Fnt_Actualizar(
+                    String id, String contacto,
+                    String correo, String edad, String ingresos, String Empresa, String contactoE, String estado)
+                {
+                    if (((((((((id == "") || (contacto == "") || (correo == "") || (edad == "") || (ingresos == "") || (Empresa == "") || (contactoE == "")))))))))
+                    {
+                    msn = "Debe ingresar la informacion que se le pida";
+                    }
+                    else
+                    {
+                    ClsClientes_Datos ObjClientes = new ClsClientes_Datos();
+                    ObjClientes.Fnt_ActualizarCliente(id,
+                    contacto,
+                    correo,
+                    edad,
+                    ingresos,
+                    Empresa,
+                    contactoE,
+                    estado);
+                msn = "Se ha actualizado con exito";
+            }
+        }
+
+
     }
 }
+//for (int i = 0; i <= 8; i++)
+//{
+//    aux[i] = Convert.ToString(ObjConsultar.Lectura[i]);
+//}

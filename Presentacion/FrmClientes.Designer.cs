@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.TxtIdentificacion = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.Btn0 = new System.Windows.Forms.Button();
+            this.Btn9 = new System.Windows.Forms.Button();
+            this.Btn8 = new System.Windows.Forms.Button();
+            this.Btn7 = new System.Windows.Forms.Button();
             this.Btn6 = new System.Windows.Forms.Button();
             this.Btn5 = new System.Windows.Forms.Button();
             this.Btn4 = new System.Windows.Forms.Button();
@@ -42,7 +42,6 @@
             this.Btn2 = new System.Windows.Forms.Button();
             this.Btn1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -73,7 +72,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
-            this.button12 = new System.Windows.Forms.Button();
+            this.BtnEnter = new System.Windows.Forms.Button();
             this.CbxSexo = new System.Windows.Forms.ComboBox();
             this.tblSexoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dB_CreditosDataSet3 = new Presentacion.DB_CreditosDataSet3();
@@ -140,45 +139,45 @@
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
-            // button10
+            // Btn0
             // 
-            this.button10.Location = new System.Drawing.Point(494, 191);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 26;
-            this.button10.Text = "0";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.Btn0.Location = new System.Drawing.Point(494, 191);
+            this.Btn0.Name = "Btn0";
+            this.Btn0.Size = new System.Drawing.Size(75, 23);
+            this.Btn0.TabIndex = 26;
+            this.Btn0.Text = "0";
+            this.Btn0.UseVisualStyleBackColor = true;
+            this.Btn0.Click += new System.EventHandler(this.button10_Click);
             // 
-            // button9
+            // Btn9
             // 
-            this.button9.Location = new System.Drawing.Point(575, 162);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 25;
-            this.button9.Text = "9";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.Btn9.Location = new System.Drawing.Point(575, 162);
+            this.Btn9.Name = "Btn9";
+            this.Btn9.Size = new System.Drawing.Size(75, 23);
+            this.Btn9.TabIndex = 25;
+            this.Btn9.Text = "9";
+            this.Btn9.UseVisualStyleBackColor = true;
+            this.Btn9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button8
+            // Btn8
             // 
-            this.button8.Location = new System.Drawing.Point(494, 162);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 24;
-            this.button8.Text = "8";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.Btn8.Location = new System.Drawing.Point(494, 162);
+            this.Btn8.Name = "Btn8";
+            this.Btn8.Size = new System.Drawing.Size(75, 23);
+            this.Btn8.TabIndex = 24;
+            this.Btn8.Text = "8";
+            this.Btn8.UseVisualStyleBackColor = true;
+            this.Btn8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button7
+            // Btn7
             // 
-            this.button7.Location = new System.Drawing.Point(413, 162);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 23;
-            this.button7.Text = "7";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.Btn7.Location = new System.Drawing.Point(413, 162);
+            this.Btn7.Name = "Btn7";
+            this.Btn7.Size = new System.Drawing.Size(75, 23);
+            this.Btn7.TabIndex = 23;
+            this.Btn7.Text = "7";
+            this.Btn7.UseVisualStyleBackColor = true;
+            this.Btn7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Btn6
             // 
@@ -243,23 +242,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkCyan;
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 104);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(345, 32);
             this.panel1.TabIndex = 28;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(235, 4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "<ENTER>";
             // 
             // label1
             // 
@@ -555,16 +543,17 @@
             this.label21.TabIndex = 2;
             this.label21.Text = "Sexo";
             // 
-            // button12
+            // BtnEnter
             // 
-            this.button12.BackColor = System.Drawing.Color.OliveDrab;
-            this.button12.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button12.Location = new System.Drawing.Point(575, 191);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 47;
-            this.button12.Text = "Ingresar";
-            this.button12.UseVisualStyleBackColor = false;
+            this.BtnEnter.BackColor = System.Drawing.Color.OliveDrab;
+            this.BtnEnter.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnEnter.Location = new System.Drawing.Point(575, 191);
+            this.BtnEnter.Name = "BtnEnter";
+            this.BtnEnter.Size = new System.Drawing.Size(75, 23);
+            this.BtnEnter.TabIndex = 47;
+            this.BtnEnter.Text = "Ingresar";
+            this.BtnEnter.UseVisualStyleBackColor = false;
+            this.BtnEnter.Click += new System.EventHandler(this.button12_Click_1);
             // 
             // CbxSexo
             // 
@@ -639,7 +628,7 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(126, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem2.Text = "&Nuevo";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
@@ -653,13 +642,14 @@
             // actualizarToolStripMenuItem
             // 
             this.actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
-            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.actualizarToolStripMenuItem.Text = "&Actualizar";
+            this.actualizarToolStripMenuItem.Click += new System.EventHandler(this.actualizarToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "&Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -723,7 +713,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.CbxEstadoCivil);
             this.Controls.Add(this.CbxSexo);
-            this.Controls.Add(this.button12);
+            this.Controls.Add(this.BtnEnter);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.TxtContactoEmpresa);
@@ -742,10 +732,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.Btn0);
+            this.Controls.Add(this.Btn9);
+            this.Controls.Add(this.Btn8);
+            this.Controls.Add(this.Btn7);
             this.Controls.Add(this.Btn6);
             this.Controls.Add(this.Btn5);
             this.Controls.Add(this.Btn4);
@@ -802,10 +792,10 @@
 
         private System.Windows.Forms.TextBox TxtIdentificacion;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button Btn0;
+        private System.Windows.Forms.Button Btn9;
+        private System.Windows.Forms.Button Btn8;
+        private System.Windows.Forms.Button Btn7;
         private System.Windows.Forms.Button Btn6;
         private System.Windows.Forms.Button Btn5;
         private System.Windows.Forms.Button Btn4;
@@ -813,7 +803,6 @@
         private System.Windows.Forms.Button Btn2;
         private System.Windows.Forms.Button Btn1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
@@ -842,7 +831,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button BtnEnter;
         private System.Windows.Forms.ComboBox CbxSexo;
         private System.Windows.Forms.ComboBox CbxEstadoCivil;
         private System.Windows.Forms.MenuStrip menuStrip1;

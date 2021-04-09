@@ -27,10 +27,25 @@ namespace Presentacion
             }
 
         }
-
+        protected void Fnt_LimpiarControles()
+        {
+            TxtNombres.Clear();
+            TxtContacto.Clear();
+            TxtCorreo.Clear();
+            TxtEdad.Clear();
+            TxtEmpresa.Clear();
+            TxtIngresos.Clear();
+            TxtContactoEmpresa.Clear();
+            CbxEstadoCivil.SelectedIndex = 0;
+            CbxSexo.SelectedIndex = 0;
+            TxtIdentificacion.Clear();
+            contador = 0;
+            var = "";
+            TxtIdentificacion.Focus();
+        }
         private void button11_Click(object sender, EventArgs e)
         {
-
+            Fnt_LimpiarControles();
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -179,7 +194,7 @@ namespace Presentacion
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-
+            Fnt_LimpiarControles();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -274,8 +289,39 @@ namespace Presentacion
         {
             ClsCliente_Negocio ObjConsultar = new ClsCliente_Negocio();
             ObjConsultar.Fnt_ConsultarCliente(TxtIdentificacion.Text);
+            TxtNombres.Text = ObjConsultar.aux[0];
+            TxtContacto.Text = ObjConsultar.aux[1];
+            TxtCorreo.Text = ObjConsultar.aux[2];
+            TxtEdad.Text = ObjConsultar.aux[3];
+            TxtIngresos.Text = ObjConsultar.aux[4];
+            TxtEmpresa.Text = ObjConsultar.aux[5];
+            TxtContactoEmpresa.Text = ObjConsultar.aux[6];
+            CbxSexo.SelectedIndex = Convert.ToInt32(ObjConsultar.aux[7]);
+            CbxEstadoCivil.SelectedIndex = Convert.ToInt32(ObjConsultar.aux[8]);
+            LblMensajeC.Text = ObjConsultar.msn;
+            if(LblMensajeC.Text=="")
+            {
+                Fnt_BloqueoTeclado();   
+            }
         }
-        
+        protected void Fnt_BloqueoTeclado()
+        {
+            Btn0.Enabled = false;
+            Btn1.Enabled = false;
+            Btn2.Enabled = false;
+            Btn3.Enabled = false;
+            Btn4.Enabled = false;
+            Btn5.Enabled = false;
+            Btn5.Enabled = false;
+            Btn6.Enabled = false;
+            Btn7.Enabled = false;
+            Btn8.Enabled = false;
+            Btn9.Enabled = false;
+            BtnEnter.Enabled = false;
+            TxtNombres.Enabled = false;
+            CbxSexo.Enabled = false;
+        }
+
         protected void Fnt_AgregarCliente()
         {
             ClsCliente_Negocio ObjCliente = new ClsCliente_Negocio();
@@ -287,6 +333,28 @@ namespace Presentacion
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Fnt_AgregarCliente();
+        }
+            
+        private void button12_Click_1(object sender, EventArgs e)
+        {
+            Fnt_ConsultarCliente();
+        }
+        protected void Fnt_ActualizarCliente()
+        {
+            ClsCliente_Negocio ObjActulizar = new ClsCliente_Negocio();
+            ObjActulizar.Fnt_Actualizar
+                (
+                TxtIdentificacion.Text, TxtContacto.Text,
+                TxtCorreo.Text, TxtEdad.Text,
+                TxtIngresos.Text, TxtEmpresa.Text,
+                TxtContactoEmpresa.Text, Convert.ToString(CbxEstadoCivil.SelectedValue)
+                );
+            LblMensajeC.Text = ObjActulizar.msn;
+        }
+                
+        private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Fnt_ActualizarCliente();
         }
     }
 }
