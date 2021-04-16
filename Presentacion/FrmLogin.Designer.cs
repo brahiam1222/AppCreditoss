@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.CbxUsuario = new System.Windows.Forms.ComboBox();
+            this.tblCredencialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_CreditosDataSet = new Presentacion.DB_CreditosDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.Btn1 = new System.Windows.Forms.Button();
@@ -50,14 +52,13 @@
             this.button12 = new System.Windows.Forms.Button();
             this.TxtContra = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dB_CreditosDataSet = new Presentacion.DB_CreditosDataSet();
-            this.tblCredencialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblCredencialesTableAdapter = new Presentacion.DB_CreditosDataSetTableAdapters.TblCredencialesTableAdapter();
+            this.X = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCredencialesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_CreditosDataSet)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_CreditosDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblCredencialesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // CbxUsuario
@@ -73,6 +74,16 @@
             this.CbxUsuario.Size = new System.Drawing.Size(345, 33);
             this.CbxUsuario.TabIndex = 0;
             this.CbxUsuario.ValueMember = "PKCorreo";
+            // 
+            // tblCredencialesBindingSource
+            // 
+            this.tblCredencialesBindingSource.DataMember = "TblCredenciales";
+            this.tblCredencialesBindingSource.DataSource = this.dB_CreditosDataSet;
+            // 
+            // dB_CreditosDataSet
+            // 
+            this.dB_CreditosDataSet.DataSetName = "DB_CreditosDataSet";
+            this.dB_CreditosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -289,19 +300,20 @@
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
-            // dB_CreditosDataSet
-            // 
-            this.dB_CreditosDataSet.DataSetName = "DB_CreditosDataSet";
-            this.dB_CreditosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblCredencialesBindingSource
-            // 
-            this.tblCredencialesBindingSource.DataMember = "TblCredenciales";
-            this.tblCredencialesBindingSource.DataSource = this.dB_CreditosDataSet;
-            // 
             // tblCredencialesTableAdapter
             // 
             this.tblCredencialesTableAdapter.ClearBeforeFill = true;
+            // 
+            // X
+            // 
+            this.X.BackColor = System.Drawing.Color.OrangeRed;
+            this.X.Location = new System.Drawing.Point(545, 12);
+            this.X.Name = "X";
+            this.X.Size = new System.Drawing.Size(36, 23);
+            this.X.TabIndex = 17;
+            this.X.Text = "X";
+            this.X.UseVisualStyleBackColor = false;
+            this.X.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmLogin
             // 
@@ -309,6 +321,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(593, 495);
+            this.Controls.Add(this.X);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TxtContra);
             this.Controls.Add(this.button12);
@@ -332,13 +345,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modulo - Credenciales";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tblCredencialesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_CreditosDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_CreditosDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblCredencialesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,5 +382,6 @@
         private DB_CreditosDataSet dB_CreditosDataSet;
         private System.Windows.Forms.BindingSource tblCredencialesBindingSource;
         private DB_CreditosDataSetTableAdapters.TblCredencialesTableAdapter tblCredencialesTableAdapter;
+        private System.Windows.Forms.Button X;
     }
 }

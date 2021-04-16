@@ -66,11 +66,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_CreditosDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DB_CreditosDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_CreditosDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_CreditosDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_CreditosDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FrmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmClientes.Designer.cs">
       <DependentUpon>FrmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCreditos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreditos.Designer.cs">
+      <DependentUpon>FrmCreditos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -88,6 +104,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCreditos.resx">
+      <DependentUpon>FrmCreditos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -147,6 +166,28 @@
     </None>
     <None Include="DB_CreditosDataSet3.xss">
       <DependentUpon>DB_CreditosDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DB_CreditosDataSet4.xsc">
+      <DependentUpon>DB_CreditosDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DB_CreditosDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_CreditosDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_CreditosDataSet4.xss">
+      <DependentUpon>DB_CreditosDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DB_CreditosDataSet5.xsc">
+      <DependentUpon>DB_CreditosDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DB_CreditosDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_CreditosDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_CreditosDataSet5.xss">
+      <DependentUpon>DB_CreditosDataSet5.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

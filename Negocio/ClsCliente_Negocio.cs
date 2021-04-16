@@ -6,6 +6,7 @@ namespace Negocio
     public class ClsCliente_Negocio
     {
         public String[] aux = new  String[9];
+        public int pos; public Decimal total, cuota2;
         public String msn;
         public String id_, nombre_, 
                 contacto_,  correo_, 
@@ -93,8 +94,14 @@ namespace Negocio
                 msn = "Se ha actualizado con exito";
             }
         }
-
-
+        public void Fnt_CalcularCuota(String monto, int cuota)
+        {
+            ClsClientes_Datos ObjCalcular = new ClsClientes_Datos();
+            ObjCalcular.Fnt_ConsultarCuota(monto, cuota);
+            cuota2 = Convert.ToDecimal(ObjCalcular.cuota2);
+            total = Convert.ToDecimal(ObjCalcular.total);
+            pos = Convert.ToInt32(ObjCalcular.pos_interes);
+        }
     }
 }
 //for (int i = 0; i <= 8; i++)

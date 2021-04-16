@@ -41,7 +41,25 @@ namespace Presentacion
             TxtIdentificacion.Clear();
             contador = 0;
             var = "";
+            Fnt_HabilitarTeclado();
             TxtIdentificacion.Focus();
+        }
+        protected void Fnt_HabilitarTeclado()
+        {
+            Btn0.Enabled = true;
+            Btn1.Enabled = true;
+            Btn2.Enabled = true;
+            Btn3.Enabled = true;
+            Btn4.Enabled = true;
+            Btn5.Enabled = true;
+            Btn5.Enabled = true;
+            Btn6.Enabled = true;
+            Btn7.Enabled = true;
+            Btn8.Enabled = true;
+            Btn9.Enabled = true;
+            BtnEnter.Enabled = true;
+            TxtNombres.Enabled = true;
+            CbxSexo.Enabled = true;
         }
         private void button11_Click(object sender, EventArgs e)
         {
