@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="ClsClientes_Datos.cs" />
     <Compile Include="ClsConexion.cs" />
+    <Compile Include="ClsCreditos_Datos.cs" />
     <Compile Include="ClsLogin_Datos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

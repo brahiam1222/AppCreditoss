@@ -40,7 +40,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.dptTimePicker = new System.Windows.Forms.DateTimePicker();
             this.TxtMonto = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -65,6 +64,8 @@
             this.BtnCancelarCredito = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.CbxPlazo = new System.Windows.Forms.ComboBox();
+            this.TxtDiadepago = new System.Windows.Forms.TextBox();
+            this.LblMensajes = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -137,6 +138,8 @@
             this.TxtIdentificacion.Name = "TxtIdentificacion";
             this.TxtIdentificacion.Size = new System.Drawing.Size(345, 31);
             this.TxtIdentificacion.TabIndex = 29;
+            this.TxtIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIdentificacion_KeyPress);
+            this.TxtIdentificacion.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtIdentificacion_KeyUp);
             // 
             // TxtNombres
             // 
@@ -182,18 +185,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(3, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(156, 25);
+            this.label5.Size = new System.Drawing.Size(128, 25);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Fecha de pago";
-            // 
-            // dptTimePicker
-            // 
-            this.dptTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dptTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dptTimePicker.Location = new System.Drawing.Point(12, 241);
-            this.dptTimePicker.Name = "dptTimePicker";
-            this.dptTimePicker.Size = new System.Drawing.Size(345, 31);
-            this.dptTimePicker.TabIndex = 34;
+            this.label5.Text = "Día de pago";
             // 
             // TxtMonto
             // 
@@ -337,6 +331,7 @@
             this.TxtTotal.Location = new System.Drawing.Point(703, 326);
             this.TxtTotal.MaxLength = 200;
             this.TxtTotal.Name = "TxtTotal";
+            this.TxtTotal.ReadOnly = true;
             this.TxtTotal.Size = new System.Drawing.Size(273, 31);
             this.TxtTotal.TabIndex = 43;
             // 
@@ -367,6 +362,7 @@
             this.BtnGuardarCredito.TabIndex = 44;
             this.BtnGuardarCredito.Text = "&Guardar Crédito";
             this.BtnGuardarCredito.UseVisualStyleBackColor = true;
+            this.BtnGuardarCredito.Click += new System.EventHandler(this.BtnGuardarCredito_Click);
             // 
             // BtnCancelarCredito
             // 
@@ -400,11 +396,32 @@
             this.CbxPlazo.ValueMember = "PKId";
             this.CbxPlazo.SelectedIndexChanged += new System.EventHandler(this.CBXPAXO);
             // 
+            // TxtDiadepago
+            // 
+            this.TxtDiadepago.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDiadepago.Location = new System.Drawing.Point(12, 242);
+            this.TxtDiadepago.MaxLength = 2;
+            this.TxtDiadepago.Name = "TxtDiadepago";
+            this.TxtDiadepago.Size = new System.Drawing.Size(345, 31);
+            this.TxtDiadepago.TabIndex = 47;
+            this.TxtDiadepago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // LblMensajes
+            // 
+            this.LblMensajes.AutoSize = true;
+            this.LblMensajes.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMensajes.Location = new System.Drawing.Point(50, 500);
+            this.LblMensajes.Name = "LblMensajes";
+            this.LblMensajes.Size = new System.Drawing.Size(0, 39);
+            this.LblMensajes.TabIndex = 48;
+            // 
             // FrmCreditos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1013, 580);
+            this.Controls.Add(this.LblMensajes);
+            this.Controls.Add(this.TxtDiadepago);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BtnCancelarCredito);
             this.Controls.Add(this.BtnGuardarCredito);
@@ -418,7 +435,6 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.TxtMonto);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.dptTimePicker);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.TxtNombres);
             this.Controls.Add(this.panel3);
@@ -469,7 +485,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dptTimePicker;
         private System.Windows.Forms.TextBox TxtMonto;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label6;
@@ -495,5 +510,7 @@
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.Label LblUsuario;
         private System.Windows.Forms.ComboBox CbxPlazo;
+        private System.Windows.Forms.TextBox TxtDiadepago;
+        private System.Windows.Forms.Label LblMensajes;
     }
 }
