@@ -16,3 +16,4 @@ C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\bin\Debug\Datos.dll
 C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\bin\Debug\Datos.pdb
 C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\obj\Debug\Presentacion.FrmPrincipal.resources
 C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\obj\Debug\Presentacion.FrmCreditos.resources
+C:\Users\EQUIPO\source\repos\AppCreditos\Presentacion\obj\Debug\Presentacion.FrmConfiguracion.resources

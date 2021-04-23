@@ -48,5 +48,12 @@ namespace Presentacion
         {
             Fnt_ModuloCreditos();
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            FrmConfiguracion ObjCreditos = new FrmConfiguracion();
+            ObjCreditos.LblUsuario.Text = LblUsuario.Text;
+            ObjCreditos.ShowDialog();
+        }
     }
 }
