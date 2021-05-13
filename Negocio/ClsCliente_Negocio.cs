@@ -102,6 +102,12 @@ namespace Negocio
             total = Convert.ToDecimal(ObjCalcular.total);
             pos = Convert.ToInt32(ObjCalcular.pos_interes);
         }
+        public void Fnt_CambiarClave(String user, String claveOld, String claveNew, String confirmarPass)
+        {
+            ClsClientes_Datos ObjCambiarClave = new ClsClientes_Datos();
+            ObjCambiarClave.Fnt_CambiarClave(user, claveOld, claveNew, confirmarPass);
+            msn = ObjCambiarClave.mensaje;
+        }
     }
 }
 //for (int i = 0; i <= 8; i++)

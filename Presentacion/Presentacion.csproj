@@ -76,6 +76,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_CreditosDataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FrmAbonos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbonos.Designer.cs">
+      <DependentUpon>FrmAbonos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAbonos.resx">
+      <DependentUpon>FrmAbonos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>

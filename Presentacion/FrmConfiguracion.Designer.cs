@@ -37,13 +37,14 @@
             this.TxtClaveAnterior = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.TxtClaveNueva = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtNuevaClave = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtConfirmarClave = new System.Windows.Forms.TextBox();
             this.BtnCambiarClave = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.LblMensaje = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -56,6 +57,7 @@
             this.panel1.BackColor = System.Drawing.Color.DarkCyan;
             this.panel1.Controls.Add(this.LblUsuario);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1040, 83);
@@ -85,7 +87,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkCyan;
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(55, 119);
+            this.panel2.Location = new System.Drawing.Point(55, 103);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(345, 32);
             this.panel2.TabIndex = 32;
@@ -103,9 +105,10 @@
             // TxtClaveAnterior
             // 
             this.TxtClaveAnterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtClaveAnterior.Location = new System.Drawing.Point(55, 151);
+            this.TxtClaveAnterior.Location = new System.Drawing.Point(55, 135);
             this.TxtClaveAnterior.MaxLength = 10;
             this.TxtClaveAnterior.Name = "TxtClaveAnterior";
+            this.TxtClaveAnterior.PasswordChar = '•';
             this.TxtClaveAnterior.Size = new System.Drawing.Size(345, 31);
             this.TxtClaveAnterior.TabIndex = 31;
             // 
@@ -124,18 +127,19 @@
             this.TxtClaveNueva.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtClaveNueva.Location = new System.Drawing.Point(3, 4);
             this.TxtClaveNueva.Name = "TxtClaveNueva";
-            this.TxtClaveNueva.Size = new System.Drawing.Size(166, 25);
+            this.TxtClaveNueva.Size = new System.Drawing.Size(131, 25);
             this.TxtClaveNueva.TabIndex = 2;
-            this.TxtClaveNueva.Text = "Confirmar Clave";
+            this.TxtClaveNueva.Text = "Nueva clave";
             // 
-            // textBox1
+            // TxtNuevaClave
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(55, 238);
-            this.textBox1.MaxLength = 10;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(345, 31);
-            this.textBox1.TabIndex = 33;
+            this.TxtNuevaClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNuevaClave.Location = new System.Drawing.Point(55, 238);
+            this.TxtNuevaClave.MaxLength = 10;
+            this.TxtNuevaClave.Name = "TxtNuevaClave";
+            this.TxtNuevaClave.PasswordChar = '•';
+            this.TxtNuevaClave.Size = new System.Drawing.Size(345, 31);
+            this.TxtNuevaClave.TabIndex = 33;
             // 
             // panel4
             // 
@@ -162,6 +166,7 @@
             this.TxtConfirmarClave.Location = new System.Drawing.Point(55, 325);
             this.TxtConfirmarClave.MaxLength = 10;
             this.TxtConfirmarClave.Name = "TxtConfirmarClave";
+            this.TxtConfirmarClave.PasswordChar = '•';
             this.TxtConfirmarClave.Size = new System.Drawing.Size(345, 31);
             this.TxtConfirmarClave.TabIndex = 35;
             // 
@@ -174,6 +179,7 @@
             this.BtnCambiarClave.TabIndex = 37;
             this.BtnCambiarClave.Text = "&Cambiar Clave";
             this.BtnCambiarClave.UseVisualStyleBackColor = true;
+            this.BtnCambiarClave.Click += new System.EventHandler(this.BtnCambiarClave_Click);
             // 
             // pictureBox1
             // 
@@ -195,18 +201,28 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // LblMensaje
+            // 
+            this.LblMensaje.AutoSize = true;
+            this.LblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMensaje.Location = new System.Drawing.Point(459, 91);
+            this.LblMensaje.Name = "LblMensaje";
+            this.LblMensaje.Size = new System.Drawing.Size(0, 24);
+            this.LblMensaje.TabIndex = 48;
+            // 
             // FrmConfiguracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1042, 576);
+            this.Controls.Add(this.LblMensaje);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnCambiarClave);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.TxtConfirmarClave);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtNuevaClave);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.TxtClaveAnterior);
             this.Controls.Add(this.panel1);
@@ -238,12 +254,13 @@
         private System.Windows.Forms.TextBox TxtClaveAnterior;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label TxtClaveNueva;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtNuevaClave;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TxtConfirmarClave;
         private System.Windows.Forms.Button BtnCambiarClave;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label LblMensaje;
     }
 }
