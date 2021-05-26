@@ -470,7 +470,7 @@ namespace Presentacion
             }
             else
             {
-                MessageBox.Show("Clave y/o Estado Inactivo, consulte con el Amistrador");
+                MessageBox.Show("Clave y/o Estado Inactivo, consulte con el Administrador");
             }
         }
         private void button12_Click(object sender, EventArgs e)
